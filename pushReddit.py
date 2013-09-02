@@ -10,6 +10,7 @@ import praw
 import re
 import time
 import pushover
+import syslog
 
 #Declare variables
 application = ##application
@@ -36,5 +37,6 @@ while True:
 			message = stripped_title + ' - ' + x.short_link
 			print 'Message sent:  New r/pipetobaccomarket Post - ' + message
 			client.send_message(message, title="New r/pipetobaccomarket Post", priority=1)
+			syslog.syslog('PushReddit - Message sent:  New r/pipetobaccomarket Post - ' + message)
 			already_done.append(x.id)
 	time.sleep(300) #sleep for 5 minutes and do it all over again
