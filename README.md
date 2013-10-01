@@ -12,3 +12,5 @@ A Pushover Account - https://pushover.net/
 The Python Reddit API wrapper - https://github.com/praw-dev/praw
 
 The Pushover API wrapper - http://pythonhosted.org/python-pushover/
+
+MySQLdb - http://mysql-python.sourceforge.net/
