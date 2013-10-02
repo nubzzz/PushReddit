@@ -24,7 +24,8 @@ cursor = db.cursor()
 #Database search functions
 def insert(ID, name):
 	try:
-		cursor.execute("INSERT INTO Done values (%s,%s)",(ID, name))
+		cmd = "INSERT INTO Done values (%s,%s)"
+		cursor.execute(cmd,(ID, name))
 		db.commit()
 	except:
 		db.rollback()
