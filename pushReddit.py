@@ -32,7 +32,11 @@ def insert(ID, name):
 def getExisting():
 	cursor.execute("SELECT id from Done")
 	data = cursor.fetchall()
-	return data
+	dataList = []
+	for i in data:
+		for a in i:
+			dataList.append(a)
+	return dataList
 
 # Setup pushover and the useragent for praw
 pushover.init(application)
