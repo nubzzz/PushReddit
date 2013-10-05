@@ -47,7 +47,7 @@ def getExisting():
 # Setup pushover and the useragent for praw
 pushover.init(application)
 client = pushover.Client(user)
-r = praw.Reddit(user_agent='New post checker by /u/nubzzz1836')
+r = praw.Reddit(user_agent='New post checker by /u/#yourusernamehere#')
 
 # Main Function
 def main():
