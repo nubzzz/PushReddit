@@ -26,10 +26,10 @@ cursor = db.cursor()
 s = sched.scheduler(time.time, time.sleep)
 
 # Database insert function
-def insert(ID, name):
+def insert(ID, name, url, date):
 	try:
-		cmd = "INSERT INTO Done values (%s,%s)"
-		cursor.execute(cmd,(ID, name))
+		cmd = "INSERT INTO Done values (%s,%s,%s,%s)"
+		cursor.execute(cmd,(ID, name, url, date))
 		db.commit()
 	except:
 		db.rollback()
@@ -69,7 +69,7 @@ def main():
 			# Log to syslog for documentation sake (will be replaced by logger at some point)
 			syslog.syslog('PushReddit - Message sent:  New r/pipetobaccomarket Post - ' + message)
 			# Add post ID to the database
-			insert(x.id, stripped_title)
+			insert(x.id, stripped_title, x.short_link, x.created_utc)
 	# Run every 300 seconds (5 minutes)
 	s.enter(300, 1, main, ())
 
