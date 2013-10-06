@@ -76,7 +76,6 @@ def main():
 # Run main
 if __name__ == '__main__':
 	try:
-
 		main()
 		s.enter(300, 1, main, ())
 		s.run()
