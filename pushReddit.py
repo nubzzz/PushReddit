@@ -76,9 +76,9 @@ def main():
 # Run main
 if __name__ == '__main__':
 	try:
-		while True:
-			main()
-			s.enter(300, 1, main, ())
-			s.run()
+
+		main()
+		s.enter(300, 1, main, ())
+		s.run()
 	except:
 		db.close()
