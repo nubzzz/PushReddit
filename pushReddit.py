@@ -54,9 +54,9 @@ def main():
 	submissions = r.get_subreddit('pipetobaccomarket').get_new(limit=20)
 	# iterate through them
 	for x in submissions:
-		# Pull out all 'For Sale' posts 
+		# Discard all Wanting to Trade/Wanting to Buy posts, leaving only Wanting to Sell or untagged posts
 		match = re.search('WT[TB]', str(x))
-		# Create the finished list
+		# Pull the list of ids from the database
 		already_done = getExisting()
 		if x.id not in already_done and not match:
 			# strip title of post and assemble message
