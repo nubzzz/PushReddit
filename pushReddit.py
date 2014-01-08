@@ -60,7 +60,7 @@ def main():
 		already_done = getExisting()
 		if x.id not in already_done and not match:
 			# strip title of post and assemble message
-			stripped_title = str(re.sub(r'([0-9]\s::\s)', '', str(x), flags=re.IGNORECASE))
+			stripped_title = str(re.sub(r'([0-9]+\s::\s)', '', str(x), flags=re.IGNORECASE))
 			message = stripped_title + ' - ' + x.short_link
 			# print out to stdout
 			print 'Message sent:  New r/pipetobaccomarket Post - ' + message
