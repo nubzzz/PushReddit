@@ -9,4 +9,7 @@
 		"database": "pushReddit",
 		"host":     "localhost"
 	}
+	"praw": {
+		"useragent": "Customize This"
+	}
 }

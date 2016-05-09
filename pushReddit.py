@@ -26,6 +26,7 @@ db_user = data["database"]["username"]
 db_pass = data["database"]["password"]
 db_database = data["database"]["database"]
 db_host = data["database"]["host"]
+praw_useragent = data["praw"]["useragent"]
 
 # Database connection init
 db = MySQLdb.connect(db_host,db_user,db_pass,db_database)
@@ -56,7 +57,7 @@ def getExisting():
 # Setup pushover and the useragent for praw
 pushover.init(application)
 client = pushover.Client(user)
-r = praw.Reddit(user_agent='New post checker by /u/#yourusernamehere#')
+r = praw.Reddit(user_agent=praw_useragent)
 
 # Main Function
 def main():
