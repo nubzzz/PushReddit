@@ -13,13 +13,22 @@ import pushover
 import syslog
 import MySQLdb
 import sched
+import json
+
+# Read in config file
+with open('config.json') as data_file:
+    data = json.load(data_file)
 
 # Declare variables
-application = ##application##
-user = ##user##
+application = data["keys"]["application"]
+user = data["keys"]["user"]
+db_user = data["database"]["username"]
+db_pass = data["database"]["password"]
+db_database = data["database"]["database"]
+db_host = data["database"]["host"]
 
 # Database connection init
-db = MySQLdb.connect("localhost",##username##,##password##,"pushReddit")
+db = MySQLdb.connect(db_host,db_user,db_pass,db_database)
 cursor = db.cursor()
 
 # Setup the scheduler

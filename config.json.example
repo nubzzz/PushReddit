@@ -1,0 +1,12 @@
+{
+	"keys": {
+		"application": "",
+		"user": ""
+	},
+	"database": {
+		"username": "pushreddit",
+		"password": "RaNd0mPa55w0rD",
+		"database": "pushReddit",
+		"host":     "localhost"
+	}
+}
