@@ -8,7 +8,7 @@
 		"password": "RaNd0mPa55w0rD",
 		"database": "pushReddit",
 		"host":     "localhost"
-	}
+	},
 	"praw": {
 		"useragent": "Customize This"
 	}
