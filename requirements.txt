@@ -1,3 +1,4 @@
 praw
 python-pushover
 MySQL-Python
+urlib3[secure]
