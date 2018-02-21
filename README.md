@@ -22,5 +22,5 @@ Set up:
 2. Run `pip install -r requirements.txt` to install the python requirements
 3. Create database
 4. Create the required table with the following:
-```CREATE TABLE IF NOT EXISTS `Done` (`id` varchar(100) COLLATE utf8_bin NOT NULL PRIMARY KEY,`name` varchar(100) COLLATE utf8_bin NOT NULL,`url` varchar(100) COLLATE utf8_bin NOT NULL,`date`  varchar(100) COLLATE utf8_bin NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;```
+```CREATE TABLE IF NOT EXISTS `Done` (`id` varchar(100) COLLATE utf8_bin NOT NULL PRIMARY KEY,`name` varchar(65353) COLLATE utf8_bin NOT NULL,`url` varchar(100) COLLATE utf8_bin NOT NULL,`date`  varchar(100) COLLATE utf8_bin NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;```
 5. Run the script and watch for Pushover notifications
