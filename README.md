@@ -13,7 +13,7 @@ The Python Reddit API wrapper - https://github.com/praw-dev/praw
 
 The Pushover API wrapper - http://pythonhosted.org/python-pushover/
 
-MySQLdb - http://mysql-python.sourceforge.net/
+pymysql - https://github.com/PyMySQL/PyMySQL
 
 
 Set up:
